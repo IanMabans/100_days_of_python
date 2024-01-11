@@ -1,4 +1,5 @@
 import random
+
 # random_integer = random.randint(100,10000)
 # print(random_integer)
 
@@ -12,7 +13,7 @@ import random
 #     print("Heads")
 # else:
 #     print("Tails")
-    
+
 # Treasure map
 # line1 = ["", "", ""]
 # line2 = ["", "", ""]
@@ -22,12 +23,11 @@ import random
 # print("Hiding your treasure! X marks the spot")
 # position = input()
 
-# if len(position) >= 2:
-#     letter = position[0].lower()  # Assuming the letter is the first character, converting to lowercase for consistency
-#     number_index = int(position[1]) - 1
-    
+# if len(position) >= 2: letter = position[0].lower()  # Assuming the letter is the first character, converting to
+# lowercase for consistency number_index = int(position[1]) - 1
+
 #     abc = ["a", "b", "c"]
-    
+
 #     letter_index = abc.index(letter)
 #     treasure_map[number_index][letter_index] = "X"
 
@@ -63,25 +63,25 @@ scissors = '''
       (____)
 ---.__(___)
 '''
-game_images = [rock,paper,scissors]
+game_images = [rock, paper, scissors]
 
 user_input = int(input("What do you choose? 0 for rock and roll, 1 for paper and 2 for scissors.\n"))
-if user_input >=3 or  user_input < 0:
-    print("You typed an invalid number. You loose")  
+if user_input >= 3 or user_input < 0:
+    print("You typed an invalid number. You loose")
 print(game_images[user_input])
-comp_choice = random.randint(0,2)
-print ("Computer choice")
+comp_choice = random.randint(0, 2)
+print("Computer choice")
 
 print(game_images[user_input])
 
-if user_input == 0 and comp_choice ==2:
-    print ("You win")
+if user_input == 0 and comp_choice == 2:
+    print("You win")
 
-elif comp_choice >user_input:
+elif comp_choice > user_input:
     print("You loose")
-elif comp_choice ==user_input:
-    print ("You draw")
-elif comp_choice ==0 and user_input ==2:
-    print ("You lose")
+elif comp_choice == user_input:
+    print("You draw")
+elif comp_choice == 0 and user_input == 2:
+    print("You lose")
 elif user_input > comp_choice:
-    print ("You win")
+    print("You win")
