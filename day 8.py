@@ -34,7 +34,23 @@ def paint_calc(height, width, cover):
     print(f"You'll need {round_up_cans} cans of paint.")
 
 
-test_h = int(input())
-test_w = int(input())
+test_h = int(input("Input height\n"))
+test_w = int(input("Input width\n"))
 coverage = 5
 paint_calc(height=test_h, width=test_w, cover=coverage)
+
+
+# Checking prime numbers
+def prime_checker(number):
+    is_prime = True
+    for i in range(2, number):
+        if number % i == 0:
+            is_prime = False
+    if is_prime:
+        print("Its a prime number")
+    else:
+        print("Its a non-prime number")
+
+
+n = int(input("Insert a prime number\n"))
+prime_checker(number=n)
