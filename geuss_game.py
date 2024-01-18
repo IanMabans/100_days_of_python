@@ -29,7 +29,7 @@ hard_level_turns = 5
 
 
 def game():
-    print("Welcome to the Geussing Game!")
+    print("Welcome to the Guessing Game!")
     print("I am thinking of a number between 1 and 100")
     answer = randint(1, 100)
 
