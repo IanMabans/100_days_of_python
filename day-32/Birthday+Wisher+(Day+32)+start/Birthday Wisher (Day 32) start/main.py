@@ -2,8 +2,8 @@ import random
 import smtplib
 import datetime as dt
 
-my_email = 'ian711451@gmail.com'
-my_password = 'tyogxtwsatugyxdz'
+my_email = 'test@gmail.com'
+my_password = ''
 
 now = dt.datetime.now()
 weekday = now.weekday()
@@ -17,6 +17,6 @@ if weekday == 0:
         connection.login(my_email, my_password)
         connection.sendmail(
             from_addr=my_email,
-            to_addrs='mahiaian@yahoo.com',
+            to_addrs='receiver@yahoo.com',
             msg=f'Subject: Monday Motivation\n\n {quote}'
             )

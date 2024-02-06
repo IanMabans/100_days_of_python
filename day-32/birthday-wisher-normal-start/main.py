@@ -5,8 +5,8 @@ from datetime import datetime
 
 import pandas
 
-my_email = 'ian711451@gmail.com'
-my_password = 'tyogxtwsatugyxdz'
+my_email = 'test@gmail.com'
+my_password = ''
 
 # 2. Check if today matches a birthday in the birthdays.csv
 # HINT 1: Create a tuple from today's month and day using datetime. e.g.
