@@ -6,7 +6,6 @@ from twilio.rest import Client
 account_sid = os.environ.get('account_sid')
 auth_token = os.environ.get('auth_token')
 
-
 owm_endpoints = 'https://api.openweathermap.org/data/2.5/forecast'
 
 api_key = os.environ.get('api_key')
@@ -23,10 +22,13 @@ response.raise_for_status()
 weather_data = response.json()
 # print(weather_data["list"][0]['weather'][0])
 will_rain = False
+
 for hour_data in weather_data["list"]:
     condition_code = hour_data["weather"][0]['id']
-    if int(condition_code) < 700:
+    # Check if the condition code indicates rain
+    if 200 <= int(condition_code) <= 531:
         will_rain = True
+        break  # No need to continue checking if we've found rain
 
 if will_rain:
     client = Client(account_sid, auth_token)
