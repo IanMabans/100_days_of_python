@@ -15,12 +15,11 @@ weather_params = {
     'appid': api_key,
     'cnt': 4,
 }
-# I am using Kiambu kenya coordinates
 
 response = requests.get(owm_endpoints, params=weather_params)
 response.raise_for_status()
 weather_data = response.json()
-# print(weather_data["list"][0]['weather'][0])
+
 will_rain = False
 
 for hour_data in weather_data["list"]:
@@ -36,7 +35,9 @@ if will_rain:
     message = client.messages.create(
         from_='[api sender number]',
         to='[your phone number]',
-        body='Its going to rain Ian, carry an umbrella ☔'
+        body='It\'s going to rain Ian, carry an umbrella ☔'
     )
 
     print(message.status)
+else:
+    print("No rain expected.")
