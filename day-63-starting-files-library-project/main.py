@@ -18,9 +18,12 @@ This will install the packages from requirements.txt for this project.
 
 app = Flask(__name__)
 
+
 # CREATE DATABASE
 class Base(DeclarativeBase):
     pass
+
+
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///books.db"
 # Create the extension
 db = SQLAlchemy(model_class=Base)
@@ -34,6 +37,7 @@ class Book(db.Model):
     title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)
     author: Mapped[str] = mapped_column(String(250), nullable=False)
     rating: Mapped[float] = mapped_column(Float, nullable=False)
+
 
 # Create table schema in the database. Requires application context.
 with app.app_context():
