@@ -51,7 +51,7 @@ class RateMovieForm(FlaskForm):
 
 
 class FindMovieForm(FlaskForm):
-    title = StringField("Movie Title", validators=[DataRequired()])
+    title = StringField("Movie ", validators=[DataRequired()])
     submit = SubmitField("Add Movie")
 
 
